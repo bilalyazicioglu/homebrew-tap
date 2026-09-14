@@ -1,18 +1,24 @@
 class Tincan < Formula
   desc "Serverless peer-to-peer voice and text chat for your terminal"
   homepage "https://github.com/bilalyazicioglu/tincan-cli"
-  version "0.2.3"
+  version "0.3.0"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.2.3/tincan-aarch64-apple-darwin.tar.gz"
-    sha256 "e03317145ec59bdfa6a3b983ad18279a3ddebe1f34478e08503f1a687d7af417"
+    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.3.0/tincan-aarch64-apple-darwin.tar.gz"
+    sha256 "883a6414eb4b8562b8875aaeb1e0782b35e8b30f3d5fe1996930c888463c6066"
+  elsif OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.3.0/tincan-x86_64-apple-darwin.tar.gz"
+    sha256 "e60d2ff96cca297a4b3b88220e5d67a43a4411d36fc8e3a6e7d8f83d43049102"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.2.3/tincan-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "a89d9b0a6ea34c0ec60d33c9685730094be0365fe9511100daf6f04091524a67"
+    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.3.0/tincan-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "c939d6e6ab41d4d945444b900758ac369e46b97230a7bc05476822e756c54bfa"
+  elsif OS.linux? && Hardware::CPU.arm?
+    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.3.0/tincan-aarch64-unknown-linux-gnu.tar.gz"
+    sha256 "139dbea0b80f44c7242a97bd3c558b7b08c89d03218be3226440ccfc1c57b1b5"
   else
-    url "https://github.com/bilalyazicioglu/tincan-cli/archive/refs/tags/v0.2.3.tar.gz"
-    sha256 "72836aa25e377f9b319f97f43f917d2acda1e2ccbbc773a311c52c82a01d6dd1"
+    url "https://github.com/bilalyazicioglu/tincan-cli/archive/refs/tags/v0.3.0.tar.gz"
+    sha256 "6964a6fe2186c9af97a2d5102fcac63b58378003f4b79024866b0dcf19b453af"
   end
 
   def install
