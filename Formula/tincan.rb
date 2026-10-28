@@ -1,24 +1,24 @@
 class Tincan < Formula
   desc "Serverless peer-to-peer voice and text chat for your terminal"
   homepage "https://tincan.rs"
-  version "0.3.4"
+  version "0.4.0"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.3.4/tincan-aarch64-apple-darwin.tar.gz"
-    sha256 "15e7ebb044602c5d45c4d4c85ae6282163bf4cb0360c97836013922d2d7029e1"
+    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.4.0/tincan-aarch64-apple-darwin.tar.gz"
+    sha256 "4b598f341e0c0e73b5b7a02a4df06f5a4971ec39f21ad460153b1a3000436895"
   elsif OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.3.4/tincan-x86_64-apple-darwin.tar.gz"
-    sha256 "2f476765ee03fcadcb0697e6b5396b23fa24efcf3765e06672aeba5ad064deca"
+    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.4.0/tincan-x86_64-apple-darwin.tar.gz"
+    sha256 "7e55e7798459f4a51bb53a44a50b1f9229a6a847657568ee6a71ae37878eda11"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.3.4/tincan-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "36d8744f8b454e11a98240a7148c4029e9414044fc8f1ff64936d8f685f7b368"
+    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.4.0/tincan-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "f0c94b31e2615986d71f17140381a5ec558610dfb9d0605b85dc9c7670e9edd8"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.3.4/tincan-aarch64-unknown-linux-gnu.tar.gz"
-    sha256 "e4dd52a3dfb90d01ea4d5ebbe540314407496cee473ee9f714ffb8ba0cfd2e50"
+    url "https://github.com/bilalyazicioglu/tincan-cli/releases/download/v0.4.0/tincan-aarch64-unknown-linux-gnu.tar.gz"
+    sha256 "c6f778f2f80feeb775edaf4b45b2d4a8f40a9a956e2093a4cf203086fdaea760"
   else
-    url "https://github.com/bilalyazicioglu/tincan-cli/archive/refs/tags/v0.3.4.tar.gz"
-    sha256 "5398da1a3bf20e21d90089c67c9bd1385173b0bd8943f911fd1b9163d622729b"
+    url "https://github.com/bilalyazicioglu/tincan-cli/archive/refs/tags/v0.4.0.tar.gz"
+    sha256 "d7f548770114ced57d20917da7a147b73139013a4bc6e77c3b95f7a4b40ad550"
   end
 
   def install
